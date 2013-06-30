@@ -5,9 +5,9 @@
 
 (meditations
   "Destructuring is an arbiter: it breaks up arguments"
-  (= ":foo:bar" ((fn [[a b]] (str b a))
+  (= ":bar:foo" ((fn [[a b]] (str b a))
          [:foo :bar]))
-        ;;; ⇒ false
+        ;;; ⇒ true
 
   "Whether in function definitions"
   (= (str "First comes love, "

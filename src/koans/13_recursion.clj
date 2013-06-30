@@ -7,7 +7,7 @@
   (loop [n   n
          acc true]
     (if (= n 0)
-      accum
+      acc
       (recur (dec n) (not acc)))))
 
 (defn recursive-reverse [coll]
@@ -35,7 +35,7 @@
 
   "Having too many stack frames requires explicit tail calls with recur"
   (= false (is-even-bigint? 100003N))
-        ;;; ⇒ false
+        ;;; ⇒ true
 
   "Reversing directions is easy when you have not gone far"
   (= '(1) (recursive-reverse [1]))

@@ -8,8 +8,8 @@
   ;;`-------
 
   "But watch out if there are not enough elements to form n sequences"
-  (= '((:a :b :c) (:d :e)) (partition 3 [:a :b :c :d :e]))
-        ;;; ⇒ false
+  (= '((:a :b :c)) (partition 3 [:a :b :c :d :e]))
+        ;;; ⇒ true
 
   "You can use partition-all to also get partitions with less then n elements"
   (= '((0 1 2) (3 4)) (partition-all 3 (range 5)))
